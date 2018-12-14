@@ -188,7 +188,7 @@ namespace Take3GUI
 
         private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-
+            
         }
 
         private void programSubmit_Click(object sender, EventArgs e)
@@ -197,6 +197,21 @@ namespace Take3GUI
             foreach (Object item in ProgramList.CheckedItems)
             {
                 selectedPrograms.Items.Add(item);
+            }
+        }
+
+        private void Test_Click(object sender, EventArgs e)
+        {
+            string[] program = selectedPrograms.Items.OfType<string>().ToArray();
+            program.ToList().ForEach(i => Console.WriteLine(i));
+        }
+
+        private void button1_Click_4(object sender, EventArgs e)
+        {
+            selectedPrograms.Items.Clear();
+            for (int i = 0; i < ProgramList.Items.Count; i++)
+            {
+                ProgramList.SetItemChecked(i, false);
             }
         }
     }

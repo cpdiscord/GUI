@@ -47,6 +47,8 @@
             this.fileBrowser = new System.Windows.Forms.ListBox();
             this.fileBrowse = new System.Windows.Forms.Button();
             this.Credits = new System.Windows.Forms.TabPage();
+            this.Test = new System.Windows.Forms.Button();
+            this.programClear = new System.Windows.Forms.Button();
             this.MainTabs.SuspendLayout();
             this.Users.SuspendLayout();
             this.Programs.SuspendLayout();
@@ -90,6 +92,8 @@
             // 
             // Programs
             // 
+            this.Programs.Controls.Add(this.programClear);
+            this.Programs.Controls.Add(this.Test);
             this.Programs.Controls.Add(this.selectedPrograms);
             this.Programs.Controls.Add(this.deleteEXE);
             this.Programs.Controls.Add(this.checkEXE);
@@ -179,7 +183,7 @@
             this.ProgramList.FormattingEnabled = true;
             this.ProgramList.Location = new System.Drawing.Point(0, 1);
             this.ProgramList.Name = "ProgramList";
-            this.ProgramList.Size = new System.Drawing.Size(213, 424);
+            this.ProgramList.Size = new System.Drawing.Size(213, 334);
             this.ProgramList.Sorted = true;
             this.ProgramList.TabIndex = 0;
             this.ProgramList.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
@@ -246,6 +250,26 @@
             this.Credits.Text = "Credits";
             this.Credits.UseVisualStyleBackColor = true;
             // 
+            // Test
+            // 
+            this.Test.Location = new System.Drawing.Point(289, 143);
+            this.Test.Name = "Test";
+            this.Test.Size = new System.Drawing.Size(75, 23);
+            this.Test.TabIndex = 8;
+            this.Test.Text = "Test";
+            this.Test.UseVisualStyleBackColor = true;
+            this.Test.Click += new System.EventHandler(this.Test_Click);
+            // 
+            // programClear
+            // 
+            this.programClear.Location = new System.Drawing.Point(41, 362);
+            this.programClear.Name = "programClear";
+            this.programClear.Size = new System.Drawing.Size(75, 23);
+            this.programClear.TabIndex = 9;
+            this.programClear.Text = "Clear";
+            this.programClear.UseVisualStyleBackColor = true;
+            this.programClear.Click += new System.EventHandler(this.button1_Click_4);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,6 +309,8 @@
         private System.Windows.Forms.TextBox checkEXE;
         private System.Windows.Forms.Button deleteEXE;
         private System.Windows.Forms.ListBox selectedPrograms;
+        private System.Windows.Forms.Button Test;
+        private System.Windows.Forms.Button programClear;
     }
 }
 
